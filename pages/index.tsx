@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from 'next/link'
-
+import Router from "next/router"
 export default function Home() {
   return (
     <div className="bg-neutral-800 h-screen w-screen flex flex-col justify-around items-center text-center">
@@ -14,7 +14,7 @@ export default function Home() {
 
       </div>
       <div className="flex justify-center flex-col w-screen">
-        <button className="bg-[#ff6f0f] text-white flex py-3 mx-3 justify-center rounded font-bold" >
+        <button className="bg-[#ff6f0f] text-white flex py-3 mx-3 justify-center rounded font-bold" onClick={()=> Router.push('/searchplace')}>
           시작하기
         </button>
         <p className="mt-4 text-[#C0C0C0] text-lg">이미 계정이 있나요? <Link href="/phoneAuthentication"><span className="text-[#ff6f0f] font-bold text-lg">로그인</span></Link></p>
